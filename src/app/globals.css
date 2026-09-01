@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050816;
+  --color-bg2: #0b1224;
+  --color-card: #10182b;
+  --color-cardhover: #16203a;
+  --color-border: #1e293b;
+  --color-accent: #a855f7;
+  --color-accent2: #ec4899;
+  --color-muted: #94a3b8;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #050816;
+  color: #f8fafc;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1224;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3654;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+.glass {
+  background: rgba(16, 24, 43, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #8b5cf6, #a855f7 60%, #ec4899);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.4), 0 12px 40px -12px rgba(168, 85, 247, 0.45);
+}
+
+.neon-ring {
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.5), 0 0 24px -4px rgba(168, 85, 247, 0.6);
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #10182b 25%, #1a2440 50%, #10182b 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 1.8s infinite linear;
+}
+
+.hero-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.12) 1px, transparent 0);
+  background-size: 40px 40px;
+}
