@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-[#050816] text-slate-100 antialiased min-h-screen">
+    <html lang="en" data-scroll-behavior="smooth">
+      <body className="bg-bg text-slate-100 antialiased min-h-screen">
         <AppProvider>
           {children}
           <Toaster />
